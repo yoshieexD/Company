@@ -1,7 +1,7 @@
 <?php
 session_start();
-
 require_once "../config/db.php";
+
 
 if (isset($_SESSION['user_id']) != "") {
     header("Location: ../page/home.php");
@@ -25,7 +25,6 @@ if (isset($_POST['login'])) {
             $_SESSION['user_name'] = $row['name'];
             $_SESSION['user_email'] = $row['email'];
             $_SESSION['user_mobile'] = $row['mobile'];
-            echo "<script>alert('Login successful!');</script>";
 
             header("Location: ../page/home.php");
             exit;

@@ -1,3 +1,6 @@
+<?php
+include './global/font.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +8,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABC - Company</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
-        body,
-        pre {
+        body {
             font-family: "Poppins", sans-serif;
 
             .main {
-                /* background-image: url(https://img.freepik.com/free-photo/business-people-working-together_155003-9400.jpg?t=st=1713535021~exp=1713538621~hmac=a2e3bac0bb02c4dc4cc89180a5ee549b5d2c529c07111b21f19806644dd08959&w=996);
+                background-image: url(https://img.freepik.com/free-photo/construction-works-frankfurt-downtown-germany_1268-20907.jpg?t=st=1713707660~exp=1713711260~hmac=d9553133c4ac70c777ec2b21c99a3ac75c1d1c0ff9f07c7c3ea8af5080859c41&w=1060);
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                background-size: cover; */
+                background-size: cover;
                 height: 68vh;
+                width: auto;
                 /* border-radius: 0% 0% 50% 50%; */
             }
 
@@ -27,12 +26,48 @@
                 font-weight: 800;
                 font-style: normal;
             }
+
+            .hover-img-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            .hover-img-container:hover .overlay {
+                opacity: 1;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-align: center;
+            }
+
+            .overlay-text {
+                z-index: 1;
+            }
+
+            .hover-img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 
-<body class="bg-dark h-100 w-100">
-    <div class="main text-white">
+<body class=" h-100 w-100">
+    <div class="main">
+
+        <!-- Navbar-->
         <div class="d-flex justify-content-center">
             <nav class="navbar navbar-expand-lg bg-white position-sticky mb-4 w-75 rounded mt-2 shadow">
                 <div class="container-fluid d-flex justify-content-between">
@@ -46,19 +81,20 @@
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="#about">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#service">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-disabled="true">Contact</a>
+                                <a class="nav-link d-lg-none d-flex" aria-disabled="true">Contact</a>
+                                <button type="button" class="btn btn-outline-warning d-none d-lg-flex">Contact</button>
                             </li>
                             <li class="nav-item d-flex d-lg-none">
                                 <a class="nav-link" aria-disabled="true" href="facebook.com">facebook</a>
                             </li>
                             <li class="nav-item d-flex d-lg-none">
-                                <a class="nav-link" aria-disabled="true" href="instagram">instagram</a>
+                                <a class="nav-link" aria-disabled="true">instagram</a>
                             </li>
                         </ul>
                     </div>
@@ -118,37 +154,74 @@
 
 
     <!-- About -->
-    <div class="text-white d-flex justify-content-center align-items-center" id="service" style="flex-direction: column;">
-        <p class="fs-3 fw-bold">OUR SERVICES</p>
-        <div class="d-flex">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+    <div class="d-flex justify-content-evenly w-full " id="about" style="padding :40px 0px">
+        <!-- <p class="fs-3 fw-bold">ABOUT US</p> -->
+        <div class="d-flex align-items-center" style="flex-direction: column;">
+            <p class="fs-3 text-warning fw-bolder">2019</p>
+            <p>Year Established</p>
+        </div>
 
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+        <div class="d-flex align-items-center" style="flex-direction: column;">
+            <p class="fs-3 text-warning fw-bolder">19</p>
+            <p>Cities we worked</p>
+        </div>
+
+        <div class="d-flex align-items-center" style="flex-direction: column;">
+            <p class="fs-3 text-warning fw-bolder">1000+</p>
+            <p>Project completed</p>
+        </div>
+
+        <div class="d-flex align-items-center" style="flex-direction: column;">
+            <p class="fs-3 text-warning fw-bolder">7</p>
+            <p>Partnered company</p>
         </div>
     </div>
 
 
 
     <!-- Services -->
-    <div></div>
+    <div class="d-flex p-4 bg-dark" id="service" style="flex-direction: column;">
+        <div class="my-4">
+            <p class="fs-2 fw-semibold m-0 text-warning">OUR SERVICES</p>
+            <p class="fst-italic m-0 text-white">WE PROVIDE A VARIETY OF SERVICES</p>
+        </div>
 
+        <div class="d-flex justify-content-evenly align-items-center my-4">
+            <div class="hover-img-container">
+                <img src="https://img.freepik.com/free-photo/high-angle-measuring-tools-still-life_23-2150440970.jpg?t=st=1713713773~exp=1713717373~hmac=a4331d0e285cfdba718d47f1a6e45e7faa57b5e66a3c54aec3803f4f464f3e87&w=360" alt="" class="img-fluid hover-img">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p class="fs-3 fw-semibold">Conceptual Planning</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hover-img-container">
+                <img src="https://img.freepik.com/free-photo/brutalist-inspiration-architecture-background_23-2149162853.jpg?t=st=1713713930~exp=1713717530~hmac=02138855b5831434f46100a44a79cea3353a1e18cc96aa98bca71c0f8f538df2&w=360" alt="" class="img-fluid  hover-img">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p class="fs-3 fw-semibold">Designing</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="hover-img-container">
+                <img src="https://img.freepik.com/free-photo/large-building-site_1127-3251.jpg?t=st=1713713852~exp=1713717452~hmac=4110a5a21f64637e27a23afd47f4d5db99b44e8e4b28d78aeabea811420c0e47&w=360" alt="" class="img-fluid hover-img">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p class="fs-3 fw-semibold">Construction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--Contact-->
-    <div></div>
+    <div class="d-flex justify-content-center align-items-center" id="service" style="flex-direction: column;">
+        <p class="fs-3 fw-bold">CONTACT</p>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
