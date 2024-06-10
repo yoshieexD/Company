@@ -73,6 +73,7 @@ include './global/font.php'
         <!-- Home -->
 
         <div class="grid">
+            <br /><br />
             <p class="text-capitalize text-center fs-1 main-text mb-4 text-warning "> ABC - REVOLUTIONIZED COMPANY</p>
             <div class="d-flex justify-content-center">
                 <p class="text-center mb-4 w-50 fs-6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -85,48 +86,20 @@ include './global/font.php'
 
     </div>
     <!-- About -->
+    <br />
     <?php include './components/about.php' ?>
+    <br />
     <!-- Services -->
-    <div class="d-flex p-4 bg-dark" id="service" style="flex-direction: column;">
-        <div class="my-4">
-            <p class="fs-2 fw-semibold m-0 text-warning">OUR SERVICES</p>
-            <p class="fst-italic m-0 text-white">WE PROVIDE A VARIETY OF SERVICES</p>
-        </div>
-
-        <div class="d-flex justify-content-evenly align-items-center my-4">
-            <div class="hover-img-container">
-                <img src="https://img.freepik.com/free-photo/high-angle-measuring-tools-still-life_23-2150440970.jpg?t=st=1713713773~exp=1713717373~hmac=a4331d0e285cfdba718d47f1a6e45e7faa57b5e66a3c54aec3803f4f464f3e87&w=360" alt="" class="img-fluid hover-img">
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <p class="fs-3 fw-semibold">Conceptual Planning</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hover-img-container">
-                <img src="https://img.freepik.com/free-photo/brutalist-inspiration-architecture-background_23-2149162853.jpg?t=st=1713713930~exp=1713717530~hmac=02138855b5831434f46100a44a79cea3353a1e18cc96aa98bca71c0f8f538df2&w=360" alt="" class="img-fluid  hover-img">
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <p class="fs-3 fw-semibold">Designing</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="hover-img-container">
-                <img src="https://img.freepik.com/free-photo/large-building-site_1127-3251.jpg?t=st=1713713852~exp=1713717452~hmac=4110a5a21f64637e27a23afd47f4d5db99b44e8e4b28d78aeabea811420c0e47&w=360" alt="" class="img-fluid hover-img">
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <p class="fs-3 fw-semibold">Construction</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include './components/services.php' ?>
     <!--Contact-->
+    <br /><br />
     <?php include './components/contact.php' ?>
+    <br /><br />
     <!--Footer -->
     <?php include './components/footer.php' ?>
+
+    <!-- All right Reserve -->
+    <?php include './components/reserve.php' ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
